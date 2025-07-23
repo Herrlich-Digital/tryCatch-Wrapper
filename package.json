@@ -1,7 +1,7 @@
 {
-  "name": "@pr0gstar/trycatch-wrapper",
+  "name": "@herrlich-digital/trycatch-wrapper",
   "description": "A simple try-catch wrapper for TypeScript inspired by Golang",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "entrypoint": "index.ts",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -36,6 +36,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pr0gstar/tryCatch-Wrapper.git"
+    "url": "https://github.com/Herrlich-Digital/tryCatch-Wrapper.git"
   }
 }
