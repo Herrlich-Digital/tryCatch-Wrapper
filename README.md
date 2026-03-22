@@ -6,24 +6,29 @@
 
 TryCatch-Wrapper is a lightweight utility designed to simplify error handling in TypeScript applications. It provides a structured approach to handling asynchronous errors using a `Result` type pattern, ensuring better code maintainability and readability.
 
+## Available on
+
+[![npm](https://img.shields.io/badge/npmjs.org-@herrlich--digital%2Ftrycatch--wrapper-CB3837?logo=npm)](https://www.npmjs.com/package/@herrlich-digital/trycatch-wrapper)
+[![GitHub Packages](https://img.shields.io/badge/GitHub_Packages-@herrlich--digital%2Ftrycatch--wrapper-181717?logo=github)](https://github.com/orgs/Herrlich-Digital/packages)
+
 ## Installation
 
-You can install the package from GitHub Packages using bun:
+You can install the package using bun:
 
 ```sh
-bun add @pr0gstar/trycatch-wrapper
+bun add @herrlich-digital/trycatch-wrapper
 ```
 
 or using npm:
 
 ```sh
-npm install @pr0gstar/trycatch-wrapper
+npm install @herrlich-digital/trycatch-wrapper
 ```
 
 or using yarn:
 
 ```sh
-yarn add @pr0gstar/trycatch-wrapper
+yarn add @herrlich-digital/trycatch-wrapper
 ```
 
 ## Usage
@@ -60,7 +65,7 @@ export async function tryCatch<T, E = Error>(
 ### Basic Example
 
 ```ts
-import { tryCatch } from "@pr0gstar/trycatch-wrapper";
+import { tryCatch } from "@herrlich-digital/trycatch-wrapper";
 
 async function fetchData(): Promise<string> {
   return await fetch("https://api.example.com/data").then((res) => res.json());
@@ -110,5 +115,6 @@ Developed by Christoph Planken.
 
 ## Links
 
-- [GitHub Repository](https://github.com/pr0gstar/trycatch-wrapper)
-- [GitHub Packages](https://github.com/pr0gstar?tab=packages)
+- [GitHub Repository](https://github.com/Herrlich-Digital/tryCatch-Wrapper)
+- [GitHub Packages](https://github.com/orgs/Herrlich-Digital/packages)
+- [npmjs.org](https://www.npmjs.com/package/@herrlich-digital/trycatch-wrapper)
