@@ -27,7 +27,8 @@ jobs:
       - name: 🛠️ Build
         run: bun run build
 
-      - name: 🚀 Publish
-        run: bun publish --verbose
+      - name: 🚀 Publish to GH packages
+        run: bun publish --access public
         env:
+          NPM_CONFIG_REGISTRY: https://npm.pkg.github.com/
           NPM_CONFIG_TOKEN: ${{ secrets.GH_TOKEN }}
