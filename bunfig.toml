@@ -1,2 +1,5 @@
 [install]
-registry = "https://npm.pkg.github.com/"
+registry = "https://registry.npmjs.org/"
+
+[install.scopes]
+"@pr0gstar" = { registry = "https://npm.pkg.github.com/", token = "$GH_TOKEN" }
