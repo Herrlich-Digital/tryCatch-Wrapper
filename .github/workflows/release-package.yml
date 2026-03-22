@@ -28,7 +28,8 @@ jobs:
         run: bun run build
 
       - name: 🚀 Publish to GH packages
-        run: bun publish --access public
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=${GH_TOKEN}" >> ~/.npmrc
+          bun publish --access public
         env:
-          NPM_CONFIG_REGISTRY: https://npm.pkg.github.com/
-          NPM_CONFIG_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
