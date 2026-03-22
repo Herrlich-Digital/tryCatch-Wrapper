@@ -1,7 +1,7 @@
 {
   "name": "@herrlich-digital/trycatch-wrapper",
   "description": "A simple try-catch wrapper for TypeScript inspired by Golang",
-  "version": "1.0.4",
+  "version": "1.0.10",
   "entrypoint": "index.ts",
   "type": "module",
   "main": "./dist/index.cjs",
