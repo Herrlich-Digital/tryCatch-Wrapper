@@ -28,6 +28,9 @@ jobs:
         run: bun run build
 
       - name: 🚀 Publish to GH packages
-        run: bun publish --access public
+        run: |
+          echo "@herrlich-digital:registry=https://npm.pkg.github.com/" > .npmrc
+          echo "//npm.pkg.github.com/:_authToken=${GH_TOKEN}" >> .npmrc
+          bun publish --access public
         env:
-          BUN_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
