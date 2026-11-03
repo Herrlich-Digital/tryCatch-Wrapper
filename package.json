@@ -8,22 +8,37 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    "import": "./dist/index.js",
-    "require": "./dist/index.cjs"
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "bun run build.ts",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "check-all": "bun run typecheck && bun run test && bun run build"
   },
   "devDependencies": {
-    "@types/bun": "latest",
-    "tsup": "^8.4.0"
+    "@types/bun": "^1.4.4",
+    "typescript": "^7.0.2"
   },
   "peerDependencies": {
-    "typescript": "^5"
+    "typescript": ">=5"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
   },
   "keywords": [
     "try",
